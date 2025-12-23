@@ -1,6 +1,0 @@
-client/TestActor.class
-client/ClientActor.class
-com/saf/messages/TestMessage.class
-com/saf/messages/TalkMessage.class
-com/saf/messages/OrderRequest.class
-client/ClientApp.class
