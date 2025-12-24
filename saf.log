@@ -1,0 +1,58 @@
+[2025-12-24 16:57:09] [INFO] [utilisateur-1] BORN -> Actor created successfully 
+[2025-12-24 16:57:09] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-1
+[2025-12-24 16:57:10] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-1
+[2025-12-24 16:57:10] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-1
+[2025-12-24 16:57:11] [INFO] [jira-manager] REMOTE_SEND -> Sending ListTicketsRequest with sender utilisateur-1
+[2025-12-24 16:57:11] [INFO] [utilisateur-1] RECEIVE -> Processing message: CreateTicketRequest
+[2025-12-24 16:57:11] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender utilisateur-1
+[2025-12-24 16:57:12] [INFO] [jira-manager] REMOTE_SEND -> Sending ListTicketsRequest with sender utilisateur-1
+[2025-12-24 20:35:17] [INFO] [utilisateur-1] BORN -> Actor created successfully 
+[2025-12-24 20:35:17] [INFO] [utilisateur-2] BORN -> Actor created successfully 
+[2025-12-24 20:35:18] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-2
+[2025-12-24 20:35:18] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-1
+[2025-12-24 20:35:19] [INFO] [utilisateur-1] RECEIVE -> Processing message: CreateTicketRequest
+[2025-12-24 20:44:44] [INFO] [utilisateur-1] BORN -> Actor created successfully 
+[2025-12-24 20:44:44] [INFO] [utilisateur-2] BORN -> Actor created successfully 
+[2025-12-24 20:44:44] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender utilisateur-1
+[2025-12-24 20:44:44] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender utilisateur-1
+[2025-12-24 20:46:42] [INFO] [utilisateur-1] BORN -> Actor created successfully 
+[2025-12-24 20:46:42] [INFO] [utilisateur-2] BORN -> Actor created successfully 
+[2025-12-24 20:46:42] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-1
+[2025-12-24 20:46:43] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-2
+[2025-12-24 20:46:43] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-1
+[2025-12-24 21:18:49] [INFO] [utilisateur-1] BORN -> Actor created successfully 
+[2025-12-24 21:18:49] [INFO] [utilisateur-2] BORN -> Actor created successfully 
+[2025-12-24 21:18:49] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender utilisateur-1
+[2025-12-24 21:18:50] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender utilisateur-1
+[2025-12-24 21:18:50] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender utilisateur-1
+[2025-12-24 21:24:15] [INFO] [utilisateur-1] BORN -> Actor created successfully 
+[2025-12-24 21:24:15] [INFO] [utilisateur-2] BORN -> Actor created successfully 
+[2025-12-24 21:24:15] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-1
+[2025-12-24 21:24:15] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-2
+[2025-12-24 21:24:16] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-1
+[2025-12-24 21:44:36] [INFO] [utilisateur-1] BORN -> Actor created successfully 
+[2025-12-24 21:44:36] [INFO] [utilisateur-2] BORN -> Actor created successfully 
+[2025-12-24 21:44:36] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender utilisateur-1
+[2025-12-24 21:44:37] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender utilisateur-1
+[2025-12-24 21:44:37] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender utilisateur-1
+[2025-12-24 21:54:36] [INFO] [utilisateur-1] BORN -> Actor created successfully 
+[2025-12-24 21:54:36] [INFO] [utilisateur-2] BORN -> Actor created successfully 
+[2025-12-24 21:54:36] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-1
+[2025-12-24 21:54:36] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-2
+[2025-12-24 21:54:36] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-1
+[2025-12-24 22:17:13] [INFO] [utilisateur-1] BORN -> Actor created successfully 
+[2025-12-24 22:17:13] [INFO] [utilisateur-2] BORN -> Actor created successfully 
+[2025-12-24 22:17:14] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender utilisateur-1
+[2025-12-24 22:17:14] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender utilisateur-1
+[2025-12-24 22:17:14] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender utilisateur-1
+[2025-12-24 22:17:15] [INFO] [utilisateur-1] RECEIVE -> Processing message: TicketResponse
+[2025-12-24 22:17:15] [INFO] [utilisateur-1] RECEIVE -> Processing message: TicketResponse
+[2025-12-24 22:17:15] [INFO] [utilisateur-1] RECEIVE -> Processing message: TicketResponse
+[2025-12-24 22:18:23] [INFO] [utilisateur-1] BORN -> Actor created successfully 
+[2025-12-24 22:18:23] [INFO] [utilisateur-2] BORN -> Actor created successfully 
+[2025-12-24 22:18:23] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-1
+[2025-12-24 22:18:23] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-2
+[2025-12-24 22:18:23] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender utilisateur-1
+[2025-12-24 22:18:27] [INFO] [utilisateur-1] RECEIVE -> Processing message: TicketResponse
+[2025-12-24 22:18:27] [INFO] [utilisateur-1] RECEIVE -> Processing message: TicketResponse
+[2025-12-24 22:18:27] [INFO] [utilisateur-2] RECEIVE -> Processing message: TicketResponse

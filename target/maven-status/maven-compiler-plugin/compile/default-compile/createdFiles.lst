@@ -1,0 +1,15 @@
+client\ClientApp.class
+com\saf\messages\TicketResponse.class
+com\saf\messages\ListTicketsRequest.class
+com\saf\messages\DeleteTicketRequest.class
+com\saf\messages\CreateTicketRequest.class
+com\saf\messages\TicketCreateDTO.class
+com\saf\messages\TicketPriority.class
+com\saf\messages\TicketStatus.class
+com\saf\messages\OrderRequest.class
+com\saf\messages\OrderResponse.class
+com\saf\messages\TalkMessage.class
+com\saf\messages\TicketDTO.class
+com\saf\messages\ListTicketsResponse.class
+com\saf\messages\TestMessage.class
+client\ClientTicketActor.class
