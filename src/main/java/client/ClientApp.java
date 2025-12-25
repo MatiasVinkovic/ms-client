@@ -8,6 +8,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
+/**
+ * ClientApp - Application de démonstration complète
+ * 
+ * OBJECTIFS DE LA DÉMO:
+ * ✅ Plusieurs clients (Alice, Bob, Charlie)
+ * ✅ Plusieurs tâches par client (variées)
+ * ✅ Logs détaillés et lisibles
+ * ✅ Design patterns intégrés
+ * ✅ Différentes catégories de réparation
+ * ✅ Différentes priorités
+ */
 @SpringBootApplication(scanBasePackages = {"client", "com.saf.spring"})
 @EnableDiscoveryClient
 public class ClientApp {
@@ -17,76 +28,126 @@ public class ClientApp {
         ActorSystem system = SAF.start(ClientApp.class, "ms-client", false, args);
         DiscoveryClient dc = SAF.getContext().getBean(DiscoveryClient.class);
 
-        System.out.println("========================================");
-        System.out.println("Client JIRA - Application de démonstration");
-        System.out.println("========================================");
+        printHeader();
 
-        // Créer un acteur local qui représente le client
-        ActorRef userClient = system.createActor(ClientTicketActor.class, "utilisateur-1");
-        ActorRef userClient2 = system.createActor(ClientTicketActor.class, "utilisateur-2");
+        // Créer les clients
+        ActorRef clientAlice = system.createActor(ClientTicketActor.class, "alice-dupont");
+        ActorRef clientBob = system.createActor(ClientTicketActor.class, "bob-martin");
+        ActorRef clientCharlie = system.createActor(ClientTicketActor.class, "charlie-bernard");
 
-        // Obtenir la référence distante vers le JiraActor sur ms-restaurant
+        // Obtenir la référence distante vers JiraActor
         ActorRef jiraRemote = new RestRemoteActorRef(dc, "ms-restaurant", "jira-manager");
 
-        //System.out.println("\n[CLIENT] Création de 3 tickets...\n");
-
-        // 1. Créer le premier ticket
-        TicketCreateDTO t1 = new TicketCreateDTO("Bug dans la page de login","La page de login ne charge pas correctement sur Firefox",TicketPriority.HIGH);
-        System.out.println("\n[CLIENT] Création d'un premier ticket...\n");
-        System.out.println(t1.toString());
-        jiraRemote.tell(new CreateTicketRequest(t1), userClient);
-
-        // Attendre un peu
-        Thread.sleep(500);
-
-        // 2. Créer le deuxième ticket
-        TicketCreateDTO t2 = new TicketCreateDTO("Amélioration: Ajouter un mode sombre", "Les utilisateurs demandent un mode sombre pour l'interface", TicketPriority.MEDIUM);
-        System.out.println("\n[CLIENT] Création d'un deuxième ticket...\n");
-        System.out.println(t2.toString());
-        jiraRemote.tell(new CreateTicketRequest(t2), userClient2);
-
-        //Thread.sleep(500);
-
-        // 3. Créer le troisième ticket
-
-        TicketCreateDTO t3 = new TicketCreateDTO("Feature: API REST pour les rapports", "Créer une API REST pour générer des rapports personnalisés", TicketPriority.LOW);
-        System.out.println("\n[CLIENT] Création d'un troisième ticket...\n");
-        System.out.println(t3.toString());
-        jiraRemote.tell(new CreateTicketRequest(t3), userClient);
+        // ========== DÉMONSTRATION COMPLÈTE ==========
         
-        /* 
-            Thread.sleep(500);
+        printPhase("PHASE 1: Tickets de sécurité (Priorité: HIGH)");
+        createAndSendTicket(jiraRemote, clientAlice,
+            "Vulnérabilité SQL Injection détectée",
+            "Une faille critique permet l'injection SQL dans le formulaire de connexion. Sécurité",
+            TicketPriority.HIGH);
+        Thread.sleep(800);
 
-         4. Lister tous les tickets
-        System.out.println("\n[CLIENT] Demande de la liste de tous les tickets...\n");
-        jiraRemote.tell(new ListTicketsRequest("ALL"), userClient);
+        printPhase("PHASE 2: Tickets de performance (Priorité: HIGH)");
+        createAndSendTicket(jiraRemote, clientBob,
+            "Application très lente - Performance dégradée",
+            "L'application met 10 secondes pour charger la page. Performance critique.",
+            TicketPriority.HIGH);
+        Thread.sleep(800);
 
-        Thread.sleep(500);
+        printPhase("PHASE 3: Tickets de base de données (Priorité: MEDIUM)");
+        createAndSendTicket(jiraRemote, clientCharlie,
+            "Optimisation requise pour les requêtes BD",
+            "Les requêtes sur la base de données sont trop lentes. Nécessite optimisation.",
+            TicketPriority.MEDIUM);
+        Thread.sleep(800);
 
-        5. Supprimer un ticket (on suppose que le premier est JIRA-1001)
-            System.out.println("\n[CLIENT] Suppression du ticket JIRA-1001...\n");
-            jiraRemote.tell(new DeleteTicketRequest("JIRA-1001"), userClient);
+        printPhase("PHASE 4: Tickets de réseau (Priorité: HIGH)");
+        createAndSendTicket(jiraRemote, clientAlice,
+            "Problème de connexion réseau intermittent",
+            "Les connexions réseau entre services sont instables. Réseau",
+            TicketPriority.HIGH);
+        Thread.sleep(800);
 
-        Thread.sleep(500);
+        printPhase("PHASE 5: Tickets de bugfix (Priorité: MEDIUM)");
+        createAndSendTicket(jiraRemote, clientBob,
+            "Bug critique: Application crash au démarrage",
+            "L'application crash immédiatement après le lancement. Bug logiciel.",
+            TicketPriority.MEDIUM);
+        Thread.sleep(800);
 
-            System.out.println("\n[CLIENT] Suppression du ticket JIRA-1002...\n");
-            jiraRemote.tell(new DeleteTicketRequest("JIRA-1002"), userClient);
+        printPhase("PHASE 6: Tickets de hardware (Priorité: LOW)");
+        createAndSendTicket(jiraRemote, clientCharlie,
+            "Disque dur serveur presque full",
+            "L'espace disque du serveur est à 95%. Maintenance préventive.",
+            TicketPriority.LOW);
+        Thread.sleep(800);
 
-        Thread.sleep(500);
-
-            System.out.println("\n[CLIENT] Suppression du ticket JIRA-1003...\n");
-            jiraRemote.tell(new DeleteTicketRequest("JIRA-1003"), userClient);
-
-        6. Lister les tickets à nouveau
-            System.out.println("\n[CLIENT] Affichage de la liste mise à jour...\n");
-            jiraRemote.tell(new ListTicketsRequest("ALL"), userClient);
-    
-        */
-
+        // ========== LISTER TOUS LES TICKETS ==========
+        printPhase("PHASE 7: Affichage de la liste complète des tickets");
         Thread.sleep(2000);
+        jiraRemote.tell(new ListTicketsRequest(), clientAlice);
 
-        System.out.println("\n========================================");
-        System.out.println("Démonstration terminée!");
-        System.out.println("========================================");
+        // Attendre que tout se termine
+        Thread.sleep(5000);
+
+        printConclusion();
+        System.exit(0);
+    }
+
+    /**
+     * Crée et envoie un ticket
+     */
+    private static void createAndSendTicket(ActorRef jiraRemote, ActorRef client, 
+                                            String title, String description, TicketPriority priority) {
+        TicketCreateDTO ticket = new TicketCreateDTO(title, description, priority);
+        System.out.println("\n👤 Client: " + client.getName());
+        System.out.println("📝 Titre: " + title);
+        System.out.println("📋 Description: " + description);
+        System.out.println("⚡ Priorité: " + priority);
+        System.out.println("➡️  Envoi vers Jira...\n");
+        jiraRemote.tell(new CreateTicketRequest(ticket), client);
+    }
+
+    // ===== AFFICHAGE =====
+
+    private static void printHeader() {
+        System.out.println("\n" + "█".repeat(80));
+        System.out.println("█" + " ".repeat(78) + "█");
+        System.out.println("█" + String.format("%s%-76s%s", " ", 
+            "🚀 DÉMO COMPLÈTE - SYSTÈME DE TICKETS JIRA AVEC ACTEURS", " ") + "█");
+        System.out.println("█" + " ".repeat(78) + "█");
+        System.out.println("█".repeat(80));
+        System.out.println("\n📊 Cette démo démontre:");
+        System.out.println("  ✓ Plusieurs clients simultanés");
+        System.out.println("  ✓ Plusieurs tâches et priorités différentes");
+        System.out.println("  ✓ Catégorisation automatique des tickets");
+        System.out.println("  ✓ Assignation à des réparateurs");
+        System.out.println("  ✓ Design Patterns (Factory, Observer, Strategy)");
+        System.out.println("  ✓ Communication distribuée via Akka");
+        System.out.println("  ✓ Logs détaillés et lisibles");
+        System.out.println("\n" + "─".repeat(80) + "\n");
+    }
+
+    private static void printPhase(String phase) {
+        System.out.println("\n" + "=".repeat(80));
+        System.out.println("  " + phase);
+        System.out.println("=".repeat(80));
+    }
+
+    private static void printConclusion() {
+        System.out.println("\n" + "█".repeat(80));
+        System.out.println("█" + " ".repeat(78) + "█");
+        System.out.println("█" + String.format("%s%-76s%s", " ", 
+            "✅ DÉMO TERMINÉE AVEC SUCCÈS", " ") + "█");
+        System.out.println("█" + " ".repeat(78) + "█");
+        System.out.println("█".repeat(80));
+        System.out.println("\n📌 Résumé:");
+        System.out.println("  • 3 clients créés: Alice, Bob, Charlie");
+        System.out.println("  • 6 tickets créés avec différentes priorités");
+        System.out.println("  • Tous les tickets ont été catégorisés automatiquement");
+        System.out.println("  • Des réparateurs ont été assignés à chaque ticket");
+        System.out.println("  • Chaque réparation a utilisé une stratégie appropriée");
+        System.out.println("  • Les logs montrent tous les détails du processus");
+        System.out.println("\n");
     }
 }
