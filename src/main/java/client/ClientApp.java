@@ -48,36 +48,40 @@ public class ClientApp {
         //Thread.sleep(500);
 
         // 3. Créer le troisième ticket
+
         TicketCreateDTO t3 = new TicketCreateDTO("Feature: API REST pour les rapports", "Créer une API REST pour générer des rapports personnalisés", TicketPriority.LOW);
         System.out.println("\n[CLIENT] Création d'un troisième ticket...\n");
         System.out.println(t3.toString());
         jiraRemote.tell(new CreateTicketRequest(t3), userClient);
+        
+        /* 
+            Thread.sleep(500);
 
-        //Thread.sleep(500);
+         4. Lister tous les tickets
+        System.out.println("\n[CLIENT] Demande de la liste de tous les tickets...\n");
+        jiraRemote.tell(new ListTicketsRequest("ALL"), userClient);
 
-        // 4. Lister tous les tickets
-        //System.out.println("\n[CLIENT] Demande de la liste de tous les tickets...\n");
-        //jiraRemote.tell(new ListTicketsRequest("ALL"), userClient);
+        Thread.sleep(500);
 
-        //Thread.sleep(500);
+        5. Supprimer un ticket (on suppose que le premier est JIRA-1001)
+            System.out.println("\n[CLIENT] Suppression du ticket JIRA-1001...\n");
+            jiraRemote.tell(new DeleteTicketRequest("JIRA-1001"), userClient);
 
-        // 5. Supprimer un ticket (on suppose que le premier est JIRA-1001)
-//        System.out.println("\n[CLIENT] Suppression du ticket JIRA-1001...\n");
-//        jiraRemote.tell(new DeleteTicketRequest("JIRA-1001"), userClient);
-//
-//        //Thread.sleep(500);
-//
-//        System.out.println("\n[CLIENT] Suppression du ticket JIRA-1002...\n");
-//        jiraRemote.tell(new DeleteTicketRequest("JIRA-1002"), userClient);
-//
-//        //Thread.sleep(500);
-//
-//        System.out.println("\n[CLIENT] Suppression du ticket JIRA-1003...\n");
-//        jiraRemote.tell(new DeleteTicketRequest("JIRA-1003"), userClient);
+        Thread.sleep(500);
 
-        // 6. Lister les tickets à nouveau
-        //System.out.println("\n[CLIENT] Affichage de la liste mise à jour...\n");
-        //jiraRemote.tell(new ListTicketsRequest("ALL"), userClient);
+            System.out.println("\n[CLIENT] Suppression du ticket JIRA-1002...\n");
+            jiraRemote.tell(new DeleteTicketRequest("JIRA-1002"), userClient);
+
+        Thread.sleep(500);
+
+            System.out.println("\n[CLIENT] Suppression du ticket JIRA-1003...\n");
+            jiraRemote.tell(new DeleteTicketRequest("JIRA-1003"), userClient);
+
+        6. Lister les tickets à nouveau
+            System.out.println("\n[CLIENT] Affichage de la liste mise à jour...\n");
+            jiraRemote.tell(new ListTicketsRequest("ALL"), userClient);
+    
+        */
 
         Thread.sleep(2000);
 
