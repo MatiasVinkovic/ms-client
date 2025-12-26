@@ -107,7 +107,7 @@ public class ClientApp {
         // ========== SUPPRESSION D'UN TICKET ==========
         printPhase("PHASE 8: Suppression d'un ticket");
         Thread.sleep(2000);
-        jiraRemote.tell(new DeleteTicketRequest("JIRA-1"), clientAlice);
+        jiraRemote.tell(new DeleteTicketRequest("JIRA-1001"), clientAlice);
         Thread.sleep(1000);
 
         // ========== LISTER À NOUVEAU POUR VÉRIFIER ==========
