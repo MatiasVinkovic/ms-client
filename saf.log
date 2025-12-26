@@ -168,3 +168,167 @@
 [2025-12-26 17:07:20] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
 [2025-12-26 17:07:20] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
 [2025-12-26 17:07:23] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 17:26:49] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 17:26:49] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 17:26:49] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 17:26:49] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 17:26:50] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 17:26:51] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 17:26:52] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 17:26:53] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 17:26:54] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 17:27:00] [INFO] [jira-manager] REMOTE_ASK_SUCCESS -> Ask réussi après 1 tentative(s)
+[2025-12-26 17:27:02] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender alice-dupont
+[2025-12-26 17:27:09] [INFO] [jira-manager] REMOTE_ASK_SUCCESS -> Ask réussi après 1 tentative(s)
+[2025-12-26 17:27:11] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 17:27:13] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 17:27:15] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 17:44:06] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 17:44:06] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 17:44:06] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 17:44:06] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 17:44:07] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 17:44:08] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 17:44:09] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 17:44:09] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 17:44:10] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 17:44:13] [INFO] [jira-manager] REMOTE_ASK_SUCCESS -> Ask réussi après 1 tentative(s)
+[2025-12-26 17:44:15] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender alice-dupont
+[2025-12-26 17:44:23] [INFO] [jira-manager] REMOTE_ASK_SUCCESS -> Ask réussi après 1 tentative(s)
+[2025-12-26 17:44:26] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 17:44:26] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 17:44:29] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 17:59:31] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 17:59:31] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 17:59:31] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 17:59:31] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 17:59:32] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 17:59:33] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 17:59:34] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 17:59:34] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 17:59:35] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 17:59:41] [INFO] [jira-manager] REMOTE_ASK_SUCCESS -> Ask réussi après 1 tentative(s)
+[2025-12-26 17:59:43] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender alice-dupont
+[2025-12-26 17:59:47] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 1 échouée : I/O error on POST request for "http://192.168.1.57:8083/actors/messages/ask": Unexpected end of file from server
+[2025-12-26 17:59:48] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 2 échouée : I/O error on POST request for "http://192.168.1.57:8083/actors/messages/ask": Connection refused
+[2025-12-26 17:59:49] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 3 échouée : I/O error on POST request for "http://192.168.1.57:8083/actors/messages/ask": Connection refused
+[2025-12-26 17:59:51] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 17:59:53] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 17:59:55] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:01:38] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 18:01:38] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 18:01:38] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 18:01:38] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:01:39] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 18:01:39] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 18:01:40] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:01:41] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 18:01:42] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 18:01:45] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 1 échouée : Service ms-jira introuvable
+[2025-12-26 18:01:46] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 2 échouée : Service ms-jira introuvable
+[2025-12-26 18:01:47] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 3 échouée : Service ms-jira introuvable
+[2025-12-26 18:01:49] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender alice-dupont
+[2025-12-26 18:01:52] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 1 échouée : Service ms-jira introuvable
+[2025-12-26 18:01:53] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 2 échouée : Service ms-jira introuvable
+[2025-12-26 18:01:54] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 3 échouée : Service ms-jira introuvable
+[2025-12-26 18:01:56] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 18:01:58] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 18:02:00] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:05:19] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 18:05:19] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 18:05:19] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 18:05:19] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:05:20] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 18:05:21] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 18:05:22] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:05:23] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 18:05:23] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 18:05:26] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 1 échouée : Service ms-jira introuvable
+[2025-12-26 18:05:27] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 2 échouée : Service ms-jira introuvable
+[2025-12-26 18:05:28] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 3 échouée : Service ms-jira introuvable
+[2025-12-26 18:05:30] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender alice-dupont
+[2025-12-26 18:05:33] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 1 échouée : Service ms-jira introuvable
+[2025-12-26 18:05:34] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 2 échouée : Service ms-jira introuvable
+[2025-12-26 18:05:35] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 3 échouée : Service ms-jira introuvable
+[2025-12-26 18:05:37] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 18:05:39] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 18:05:41] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:06:53] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 18:06:53] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 18:06:53] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 18:06:53] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:06:54] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 18:06:54] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 18:06:55] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:06:56] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 18:07:05] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 18:07:05] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 18:07:05] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 18:07:05] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:07:05] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 18:07:06] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 18:07:07] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:07:08] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 18:07:09] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 18:07:11] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 1 échouée : Service ms-jira introuvable
+[2025-12-26 18:07:12] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 2 échouée : Service ms-jira introuvable
+[2025-12-26 18:07:13] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 3 échouée : Service ms-jira introuvable
+[2025-12-26 18:07:15] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender alice-dupont
+[2025-12-26 18:07:18] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 1 échouée : Service ms-jira introuvable
+[2025-12-26 18:07:20] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 2 échouée : Service ms-jira introuvable
+[2025-12-26 18:07:21] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 3 échouée : Service ms-jira introuvable
+[2025-12-26 18:07:23] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 18:07:25] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 18:07:27] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:12:10] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 18:12:10] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 18:12:10] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 18:12:10] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:12:11] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 18:12:12] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 18:12:13] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:12:14] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 18:12:14] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 18:12:17] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 1 échouée : Service ms-jira introuvable
+[2025-12-26 18:12:18] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 2 échouée : Service ms-jira introuvable
+[2025-12-26 18:12:19] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 3 échouée : Service ms-jira introuvable
+[2025-12-26 18:12:21] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender alice-dupont
+[2025-12-26 18:12:24] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 1 échouée : Service ms-jira introuvable
+[2025-12-26 18:12:25] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 2 échouée : Service ms-jira introuvable
+[2025-12-26 18:12:26] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 3 échouée : Service ms-jira introuvable
+[2025-12-26 18:12:28] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 18:12:30] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 18:12:32] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:13:52] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 18:13:52] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 18:13:52] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 18:13:52] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:13:53] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 18:13:54] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 18:13:55] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:13:56] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 18:13:56] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 18:13:59] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 1 échouée : Service ms-jira introuvable
+[2025-12-26 18:14:03] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 2 échouée : Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration': Unexpected exception during bean creation
+[2025-12-26 18:14:18] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 18:14:18] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 18:14:18] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 18:14:18] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:14:19] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 18:14:20] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 18:14:20] [INFO] [bob-martin] RECEIVE -> Processing message: TicketResponse
+[2025-12-26 18:14:20] [INFO] [alice-dupont] RECEIVE -> Processing message: TicketResponse
+[2025-12-26 18:14:21] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 18:14:21] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 18:14:22] [INFO] [charlie-bernard] RECEIVE -> Processing message: TicketResponse
+[2025-12-26 18:14:22] [INFO] [alice-dupont] RECEIVE -> Processing message: TicketResponse
+[2025-12-26 18:14:22] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 18:14:28] [INFO] [jira-manager] REMOTE_ASK_SUCCESS -> Ask réussi après 1 tentative(s)
+[2025-12-26 18:14:30] [INFO] [bob-martin] RECEIVE -> Processing message: TicketResponse
+[2025-12-26 18:14:30] [INFO] [charlie-bernard] RECEIVE -> Processing message: TicketResponse
+[2025-12-26 18:14:30] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender alice-dupont
+[2025-12-26 18:14:37] [INFO] [jira-manager] REMOTE_ASK_SUCCESS -> Ask réussi après 1 tentative(s)
+[2025-12-26 18:14:38] [INFO] [alice-dupont] RECEIVE -> Processing message: TicketResponse
+[2025-12-26 18:14:40] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 18:14:42] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 18:14:43] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont

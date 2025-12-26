@@ -43,7 +43,7 @@ public class ClientApp {
         ActorRef clientCharlie = system.createActor(ClientTicketActor.class, "charlie-bernard");
 
         // Obtenir la référence distante vers JiraActor
-        ActorRef jiraRemote = new RestRemoteActorRef(dc, "ms-restaurant", "jira-manager");
+        ActorRef jiraRemote = new RestRemoteActorRef(dc, "ms-jira", "jira-manager");
 
         // ========== DÉMONSTRATION COMPLÈTE ==========
         
@@ -147,7 +147,7 @@ public class ClientApp {
         Thread.sleep(5000);
 
         printConclusion();
-        System.exit(0);
+
     }
 
     /**
