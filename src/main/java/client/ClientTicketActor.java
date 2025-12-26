@@ -15,6 +15,8 @@ public class ClientTicketActor implements Actor {
             handleTicketResponse(response, ctx);
         } else if (msg instanceof ListTicketsResponse response) {
             handleListTicketsResponse(response, ctx);
+        } else if (msg instanceof TalkMessage talk) {
+            handleTalkMessage(talk, ctx);
         } else {
             System.out.println("⚠️  Message non reconnu: " + msg.getClass().getSimpleName());
         }
@@ -58,5 +60,13 @@ public class ClientTicketActor implements Actor {
         
         System.out.println("│");
         System.out.println("└" + "─".repeat(76) + "┘\n");
+    }
+
+    /**
+     * Gère les messages de conversation
+     */
+    private void handleTalkMessage(TalkMessage talk, ActorContext ctx) {
+        System.out.println("\n💬 Message reçu: " + talk.getContent());
+        System.out.println("   De: " + (ctx.sender() != null ? ctx.sender().getName() : "Inconnu") + "\n");
     }
 }

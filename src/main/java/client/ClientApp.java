@@ -8,6 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
+
 /**
  * ClientApp - Application de démonstration complète
  * 
@@ -18,6 +21,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * ✅ Design patterns intégrés
  * ✅ Différentes catégories de réparation
  * ✅ Différentes priorités
+ * ✅ Communication synchrone (ask) avec réponses
+ * ✅ Suppression de tickets
+ * ✅ Communication locale entre acteurs
+ * ✅ Supervision et gestion d'erreurs
  */
 @SpringBootApplication(scanBasePackages = {"client", "com.saf.spring"})
 @EnableDiscoveryClient
@@ -82,10 +89,59 @@ public class ClientApp {
             TicketPriority.LOW);
         Thread.sleep(800);
 
-        // ========== LISTER TOUS LES TICKETS ==========
-        printPhase("PHASE 7: Affichage de la liste complète des tickets");
+        // ========== LISTER TOUS LES TICKETS (avec ask) ==========
+        printPhase("PHASE 7: Affichage de la liste complète des tickets (communication synchrone)");
         Thread.sleep(2000);
-        jiraRemote.tell(new ListTicketsRequest(), clientAlice);
+        try {
+            CompletableFuture<ListTicketsResponse> future = jiraRemote.ask(new ListTicketsRequest(), ListTicketsResponse.class);
+            ListTicketsResponse response = future.get(5, TimeUnit.SECONDS);
+            System.out.println("📊 Réponse reçue:");
+            System.out.println("   Total: " + response.getCount() + " ticket(s)");
+            for (String ticketInfo : response.getTickets()) {
+                System.out.println("   " + ticketInfo);
+            }
+        } catch (Exception e) {
+            System.err.println("Erreur lors de la récupération des tickets: " + e.getMessage());
+        }
+
+        // ========== SUPPRESSION D'UN TICKET ==========
+        printPhase("PHASE 8: Suppression d'un ticket");
+        Thread.sleep(2000);
+        jiraRemote.tell(new DeleteTicketRequest("JIRA-1"), clientAlice);
+        Thread.sleep(1000);
+
+        // ========== LISTER À NOUVEAU POUR VÉRIFIER ==========
+        printPhase("PHASE 9: Vérification après suppression");
+        Thread.sleep(2000);
+        try {
+            CompletableFuture<ListTicketsResponse> future2 = jiraRemote.ask(new ListTicketsRequest(), ListTicketsResponse.class);
+            ListTicketsResponse response2 = future2.get(5, TimeUnit.SECONDS);
+            System.out.println("📊 Liste mise à jour:");
+            System.out.println("   Total: " + response2.getCount() + " ticket(s)");
+            for (String ticketInfo : response2.getTickets()) {
+                System.out.println("   " + ticketInfo);
+            }
+        } catch (Exception e) {
+            System.err.println("Erreur lors de la vérification: " + e.getMessage());
+        }
+
+        // ========== COMMUNICATION LOCALE ENTRE ACTEURS ==========
+        printPhase("PHASE 9: Communication locale entre acteurs");
+        Thread.sleep(2000);
+        System.out.println("Alice envoie un message à Bob...");
+        clientAlice.tell(new TalkMessage("Salut Bob, comment ça va ?"), clientBob);
+        Thread.sleep(1000);
+        System.out.println("Bob répond à Alice...");
+        clientBob.tell(new TalkMessage("Ça va bien Alice, merci ! Et toi ?"), clientAlice);
+        Thread.sleep(1000);
+
+        // ========== SIMULATION D'ERREUR (SUPERVISION) ==========
+        printPhase("PHASE 10: Simulation d'erreur pour démontrer la supervision");
+        Thread.sleep(2000);
+        System.out.println("Envoi d'une requête invalide (ticket null) pour provoquer une exception...");
+        CreateTicketRequest invalidRequest = new CreateTicketRequest(null);
+        jiraRemote.tell(invalidRequest, clientAlice);
+        Thread.sleep(2000); // Laisser le temps à la supervision de redémarrer l'acteur
 
         // Attendre que tout se termine
         Thread.sleep(5000);
@@ -124,6 +180,10 @@ public class ClientApp {
         System.out.println("  ✓ Assignation à des réparateurs");
         System.out.println("  ✓ Design Patterns (Factory, Observer, Strategy)");
         System.out.println("  ✓ Communication distribuée via Akka");
+        System.out.println("  ✓ Communication synchrone (ask) avec réponses");
+        System.out.println("  ✓ Suppression de tickets");
+        System.out.println("  ✓ Communication locale entre acteurs");
+        System.out.println("  ✓ Supervision et redémarrage automatique en cas d'erreur");
         System.out.println("  ✓ Logs détaillés et lisibles");
         System.out.println("\n" + "─".repeat(80) + "\n");
     }
@@ -144,6 +204,10 @@ public class ClientApp {
         System.out.println("\n📌 Résumé:");
         System.out.println("  • 3 clients créés: Alice, Bob, Charlie");
         System.out.println("  • 6 tickets créés avec différentes priorités");
+        System.out.println("  • Liste des tickets récupérée via communication synchrone (ask)");
+        System.out.println("  • 1 ticket supprimé (JIRA-1)");
+        System.out.println("  • Communication locale entre acteurs (Alice ↔ Bob)");
+        System.out.println("  • Erreur simulée et supervision activée (redémarrage automatique)");
         System.out.println("  • Tous les tickets ont été catégorisés automatiquement");
         System.out.println("  • Des réparateurs ont été assignés à chaque ticket");
         System.out.println("  • Chaque réparation a utilisé une stratégie appropriée");
