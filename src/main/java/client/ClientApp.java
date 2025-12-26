@@ -143,6 +143,37 @@ public class ClientApp {
         jiraRemote.tell(invalidRequest, clientAlice);
         Thread.sleep(2000); // Laisser le temps à la supervision de redémarrer l'acteur
 
+        // ========== SIMULATION DE BLOCAGE D'ACTEUR (TOLÉRANCE AUX PANNES) ==========
+        printPhase("PHASE 11: Simulation de blocage d'acteur pour tolérance aux pannes");
+        Thread.sleep(2000);
+        
+        // Créer un acteur local pour démontrer le blocage avec des acteurs locaux
+        System.out.println("🏭 Création d'un superviseur local pour la démo de blocage...");
+        ActorRef superviseur = system.createActor(ReparationSupervisor.class, "supervisor-local");
+        Thread.sleep(1000);
+
+        System.out.println("🔒 Blocage du superviseur local pour simuler une panne...");
+        system.blockActor("supervisor-local");
+        System.out.println("   ⚠️  Le superviseur est maintenant BLOQUÉ. Les messages resteront en queue.");
+        Thread.sleep(1000);
+
+        System.out.println("\n📤 Envoi de 3 messages au superviseur BLOQUÉ (ils restent en queue):");
+        for (int i = 1; i <= 3; i++) {
+            System.out.println("   [" + i + "] Envoi du message " + i + " au superviseur...");
+            superviseur.tell(new TestMessage("Message " + i + " pendant blocage"), clientAlice);
+            Thread.sleep(300);
+        }
+        System.out.println("\n   ⏸️  Messages reçus mais non traités (bloqués en queue)");
+        Thread.sleep(2000);
+
+        System.out.println("\n🔓 Déblocage du superviseur local...");
+        system.unblockActor("supervisor-local");
+        System.out.println("   ✅ Le superviseur est maintenant DÉBLOQUÉ et va traiter les messages en queue.");
+        Thread.sleep(4000); // Attendre le traitement (processOneCycle = 2s)
+
+        System.out.println("\n✅ Tous les messages en queue ont été traités après déblocage !");
+        System.out.println("   → Cela démontre la TOLÉRANCE AUX PANNES avec messages conservés");
+
         // Attendre que tout se termine
         Thread.sleep(5000);
 
@@ -184,6 +215,7 @@ public class ClientApp {
         System.out.println("  ✓ Suppression de tickets");
         System.out.println("  ✓ Communication locale entre acteurs");
         System.out.println("  ✓ Supervision et redémarrage automatique en cas d'erreur");
+        System.out.println("  ✓ Tolérance aux pannes avec blocage/déblocage d'acteurs");
         System.out.println("  ✓ Logs détaillés et lisibles");
         System.out.println("\n" + "─".repeat(80) + "\n");
     }
@@ -208,6 +240,7 @@ public class ClientApp {
         System.out.println("  • 1 ticket supprimé (JIRA-1)");
         System.out.println("  • Communication locale entre acteurs (Alice ↔ Bob)");
         System.out.println("  • Erreur simulée et supervision activée (redémarrage automatique)");
+        System.out.println("  • Blocage d'acteur simulé et tolérance démontrée (messages en queue)");
         System.out.println("  • Tous les tickets ont été catégorisés automatiquement");
         System.out.println("  • Des réparateurs ont été assignés à chaque ticket");
         System.out.println("  • Chaque réparation a utilisé une stratégie appropriée");
