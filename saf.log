@@ -89,3 +89,31 @@
 [2025-12-26 14:42:07] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
 [2025-12-26 14:42:07] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
 [2025-12-26 14:42:10] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 15:19:50] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 15:19:50] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 15:19:50] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 15:19:50] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 15:19:51] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 15:19:52] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 15:19:53] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 15:19:54] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 15:19:55] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 15:20:04] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender alice-dupont
+[2025-12-26 15:20:16] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 15:20:16] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 15:20:18] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 15:54:29] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 15:54:29] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 15:54:29] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 15:54:29] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 15:54:30] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 15:54:31] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 15:54:32] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 15:54:32] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 15:54:33] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 15:54:36] [INFO] [jira-manager] REMOTE_ASK_SUCCESS -> Ask réussi après 1 tentative(s)
+[2025-12-26 15:54:38] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender alice-dupont
+[2025-12-26 15:54:46] [INFO] [jira-manager] REMOTE_ASK_SUCCESS -> Ask réussi après 1 tentative(s)
+[2025-12-26 15:54:49] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 15:54:49] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 15:54:52] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
