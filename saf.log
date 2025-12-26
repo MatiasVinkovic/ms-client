@@ -430,3 +430,112 @@
 [2025-12-26 19:00:07] [INFO] [supervisor-local] RECEIVE -> Processing message: TestMessage
 [2025-12-26 19:00:07] [INFO] [supervisor-local] RECEIVE -> Processing message: TestMessage
 [2025-12-26 19:00:07] [INFO] [supervisor-local] RECEIVE -> Processing message: TestMessage
+[2025-12-26 19:21:02] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 19:21:02] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 19:21:02] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 19:21:02] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:21:02] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 19:21:03] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 19:21:04] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:21:05] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 19:21:06] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 19:21:08] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 1 échouée : Service ms-jira introuvable
+[2025-12-26 19:21:09] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 2 échouée : Service ms-jira introuvable
+[2025-12-26 19:21:10] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 3 échouée : Service ms-jira introuvable
+[2025-12-26 19:21:13] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender alice-dupont
+[2025-12-26 19:21:16] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 1 échouée : Service ms-jira introuvable
+[2025-12-26 19:21:17] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 2 échouée : Service ms-jira introuvable
+[2025-12-26 19:21:18] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 3 échouée : Service ms-jira introuvable
+[2025-12-26 19:21:20] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 19:21:22] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 19:21:24] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:21:28] [INFO] [supervisor-local] BORN -> Actor created successfully 
+[2025-12-26 19:21:29] [WARN] [supervisor-local] LIFECYCLE -> Actor has been BLOCKED
+[2025-12-26 19:21:30] [INFO] [supervisor-local] BLOCKED -> Acteur bloqué, impossible de communiquer
+[2025-12-26 19:21:32] [INFO] [supervisor-local] BLOCKED -> Acteur bloqué, impossible de communiquer
+[2025-12-26 19:21:32] [INFO] [supervisor-local] LIFECYCLE -> Actor has been UNBLOCKED
+[2025-12-26 19:21:34] [INFO] [supervisor-local] RECEIVE -> Processing message: TestMessage
+[2025-12-26 19:21:34] [INFO] [supervisor-local] RECEIVE -> Processing message: TestMessage
+[2025-12-26 19:21:34] [INFO] [supervisor-local] RECEIVE -> Processing message: TestMessage
+[2025-12-26 19:22:45] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 19:22:45] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 19:22:45] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 19:22:45] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:22:46] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 19:22:47] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 19:22:47] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:22:48] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 19:22:49] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 19:22:59] [INFO] [jira-manager] REMOTE_ASK_SUCCESS -> Ask réussi après 1 tentative(s)
+[2025-12-26 19:22:59] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender alice-dupont
+[2025-12-26 19:23:05] [INFO] [jira-manager] REMOTE_ASK_SUCCESS -> Ask réussi après 1 tentative(s)
+[2025-12-26 19:23:07] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 19:23:09] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 19:23:11] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:23:15] [INFO] [supervisor-local] BORN -> Actor created successfully 
+[2025-12-26 19:23:16] [WARN] [supervisor-local] LIFECYCLE -> Actor has been BLOCKED
+[2025-12-26 19:23:17] [INFO] [supervisor-local] BLOCKED -> Acteur bloqué, impossible de communiquer
+[2025-12-26 19:23:19] [INFO] [supervisor-local] BLOCKED -> Acteur bloqué, impossible de communiquer
+[2025-12-26 19:23:20] [INFO] [supervisor-local] LIFECYCLE -> Actor has been UNBLOCKED
+[2025-12-26 19:23:21] [INFO] [supervisor-local] RECEIVE -> Processing message: TestMessage
+[2025-12-26 19:23:21] [INFO] [supervisor-local] RECEIVE -> Processing message: TestMessage
+[2025-12-26 19:23:21] [INFO] [supervisor-local] RECEIVE -> Processing message: TestMessage
+[2025-12-26 19:27:34] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 19:27:34] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 19:27:34] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 19:27:34] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:27:35] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 19:27:36] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 19:27:36] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:27:37] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 19:27:38] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 19:27:41] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 1 échouée : Service ms-jira introuvable
+[2025-12-26 19:27:42] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 2 échouée : Service ms-jira introuvable
+[2025-12-26 19:27:43] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 3 échouée : Service ms-jira introuvable
+[2025-12-26 19:27:45] [INFO] [jira-manager] REMOTE_SEND -> Sending DeleteTicketRequest with sender alice-dupont
+[2025-12-26 19:27:48] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 1 échouée : Service ms-jira introuvable
+[2025-12-26 19:27:49] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 2 échouée : Service ms-jira introuvable
+[2025-12-26 19:27:50] [WARN] [jira-manager] REMOTE_ASK_RETRY -> Tentative 3 échouée : Service ms-jira introuvable
+[2025-12-26 19:27:52] [INFO] [alice-dupont] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 19:27:54] [INFO] [bob-martin] RECEIVE -> Processing message: TalkMessage
+[2025-12-26 19:27:56] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:28:00] [INFO] [supervisor-local] BORN -> Actor created successfully 
+[2025-12-26 19:28:01] [WARN] [supervisor-local] LIFECYCLE -> Actor has been BLOCKED
+[2025-12-26 19:28:02] [INFO] [supervisor-local] BLOCKED -> Acteur bloqué, impossible de communiquer
+[2025-12-26 19:28:04] [INFO] [supervisor-local] BLOCKED -> Acteur bloqué, impossible de communiquer
+[2025-12-26 19:28:05] [INFO] [supervisor-local] LIFECYCLE -> Actor has been UNBLOCKED
+[2025-12-26 19:28:06] [INFO] [supervisor-local] RECEIVE -> Processing message: TestMessage
+[2025-12-26 19:28:06] [INFO] [supervisor-local] RECEIVE -> Processing message: TestMessage
+[2025-12-26 19:28:06] [INFO] [supervisor-local] RECEIVE -> Processing message: TestMessage
+[2025-12-26 19:44:16] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 19:44:16] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 19:44:16] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 19:44:16] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:44:17] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 19:44:18] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 19:44:19] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:44:19] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 19:44:20] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 19:44:47] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 19:44:47] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 19:44:47] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 19:44:47] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:44:47] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 19:44:48] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 19:44:49] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:44:50] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 19:44:57] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 19:44:57] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 19:44:57] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 19:44:57] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:44:58] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 19:44:59] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 19:44:59] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:45:21] [INFO] [alice-dupont] BORN -> Actor created successfully 
+[2025-12-26 19:45:21] [INFO] [bob-martin] BORN -> Actor created successfully 
+[2025-12-26 19:45:21] [INFO] [charlie-bernard] BORN -> Actor created successfully 
+[2025-12-26 19:45:21] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:45:22] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin
+[2025-12-26 19:45:23] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender charlie-bernard
+[2025-12-26 19:45:24] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender alice-dupont
+[2025-12-26 19:45:25] [INFO] [jira-manager] REMOTE_SEND -> Sending CreateTicketRequest with sender bob-martin

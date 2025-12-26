@@ -89,6 +89,8 @@ public class ClientApp {
             TicketPriority.LOW);
         Thread.sleep(800);
 
+
+
         // ========== LISTER TOUS LES TICKETS (avec ask) ==========
         printPhase("PHASE 7: Affichage de la liste complète des tickets (communication synchrone)");
         Thread.sleep(2000);
@@ -97,9 +99,12 @@ public class ClientApp {
             ListTicketsResponse response = future.get(5, TimeUnit.SECONDS);
             System.out.println("📊 Réponse reçue:");
             System.out.println("   Total: " + response.getCount() + " ticket(s)");
+
+
             for (String ticketInfo : response.getTickets()) {
                 System.out.println("   " + ticketInfo);
             }
+
         } catch (Exception e) {
             System.err.println("Erreur lors de la récupération des tickets: " + e.getMessage());
         }
@@ -129,10 +134,10 @@ public class ClientApp {
         printPhase("PHASE 9: Communication locale entre acteurs");
         Thread.sleep(2000);
         System.out.println("Alice envoie un message à Bob...");
-        clientAlice.tell(new TalkMessage("Salut Bob, comment ça va ?"), clientBob);
+        clientAlice.tell(new TalkMessage("Salut Alice, comment ça va ?"), clientBob);
         Thread.sleep(1000);
-        System.out.println("Bob répond à Alice...");
-        clientBob.tell(new TalkMessage("Ça va bien Alice, merci ! Et toi ?"), clientAlice);
+        System.out.println("Alice répond à Bob...");
+        clientBob.tell(new TalkMessage("Ça va bien Bob, merci ! Et toi ?"), clientAlice);
         Thread.sleep(1000);
 
         // ========== SIMULATION D'ERREUR (SUPERVISION) ==========
